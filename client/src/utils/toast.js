@@ -1,5 +1,8 @@
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const showToast = (icon, title) => {
   const Toast = Swal.mixin({
