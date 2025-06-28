@@ -13,31 +13,23 @@ import Protected from "../routes/Protected";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: (
+      <Protected>
+        <Home></Home>
+      </Protected>
+    ),
     children: [
       {
         path: "/",
-        element: (
-          <Protected>
-            <Alltask></Alltask>
-          </Protected>
-        ),
+        element: <Alltask></Alltask>,
       },
       {
         path: "/task/:id",
-        element: (
-          <Protected>
-            <Taskdetails></Taskdetails>
-          </Protected>
-        ),
+        element: <Taskdetails></Taskdetails>,
       },
       {
         path: "/spin",
-        element: (
-          <Protected>
-            <Spin></Spin>
-          </Protected>
-        ),
+        element: <Spin></Spin>,
       },
       {
         path: "*",
