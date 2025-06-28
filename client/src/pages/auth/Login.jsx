@@ -32,7 +32,7 @@ const Login = () => {
       console.log("Login successful:", response.data);
       showToast("success", "Login successful!");
       // লগইন সফল হলে ব্যবহারকারীকে অন্য পেজে রিডাইরেক্ট করুন
-      navigate("/dashboard"); // '/dashboard' আপনার ড্যাশবোর্ডের রাউট হতে পারে
+      navigate("/"); // '/dashboard' আপনার ড্যাশবোর্ডের রাউট হতে পারে
       // অথবা লোকাল স্টোরেজে টোকেন বা ব্যবহারকারীর তথ্য সংরক্ষণ করতে পারেন
       // উদাহরণস্বরূপ টোকেন সংরক্ষণ
     } catch (error) {
